@@ -1,9 +1,18 @@
-import './App.css';
+import "./App.css";
+
+import { About, Footer, Header, Skills, Testimonials, Work } from "./container";
+import { Navbar } from "./components";
 
 function App() {
   return (
-    <div className="App">
-      This thing werks!!!
+    <div className="app">
+      <Navbar />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonials />
+      <Footer />
     </div>
   );
 }
