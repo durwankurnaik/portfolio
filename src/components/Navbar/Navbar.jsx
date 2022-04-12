@@ -9,6 +9,11 @@ import { easeOut } from "popmotion";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const handleOnClick = (e) => {
+    e.stopPropagation();
+    setToggle((prevState) => !prevState);
+  };
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -25,14 +30,15 @@ const Navbar = () => {
       </ul>
 
       <div className="app__navbar-menu">
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
+        <HiMenuAlt4 onClick={(e) => handleOnClick(e)} />
 
         {toggle && (
           <motion.div
-            whileInView={{ x: [300, 0] }}
+            initial={{ width: 0 }}
+            animate={{ width: 300 }}
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
-            <HiX onClick={() => setToggle(false)} />
+            <HiX onClick={(e) => handleOnClick(e)} />
             <ul>
               {["home", "about", "work", "skills", "contact"].map((item) => (
                 <li key={item}>
