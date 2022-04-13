@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
-import { easeInOut } from "popmotion";
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("All");

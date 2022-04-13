@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
-import { images } from "../../constants";
 import "./Navbar.scss";
-import { easeOut } from "popmotion";
 
 const menuItems = ["home", "about", "work", "skills", "contact"]
 
