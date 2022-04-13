@@ -6,7 +6,7 @@ import { images } from "../../constants";
 import "./Navbar.scss";
 import { easeOut } from "popmotion";
 
-const menuItems = ["home", "about", "work", "skills", "testimonial", "contact"]
+const menuItems = ["home", "about", "work", "skills", "contact"]
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
