@@ -6,6 +6,8 @@ import { images } from "../../constants";
 import "./Navbar.scss";
 import { easeOut } from "popmotion";
 
+const menuItems = ["home", "about", "work", "skills", "testimonial", "contact"]
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -16,12 +18,12 @@ const Navbar = () => {
 
   return (
     <nav className="app__navbar">
-      <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
-      </div>
+      {/* <div className="app__navbar-logo">
+        <img src={images.durwankur_logo} alt="logo" />
+      </div> */}
 
       <ul className="app__navbar-links">
-        {["home", "about", "work", "skills", "testimonial", "contact"].map((item) => (
+        {menuItems.map((item) => (
           <li className="app__flex p-text" key={`links-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -40,7 +42,7 @@ const Navbar = () => {
           >
             <HiX onClick={(e) => handleOnClick(e)} />
             <ul>
-              {["home", "about", "work", "skills", "testimonial", "contact"].map((item) => (
+              {menuItems.map((item) => (
                 <li key={item}>
                   <a onClick={() => setToggle(false)} href={`#${item}`}>
                     {item}
